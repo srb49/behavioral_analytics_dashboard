@@ -1,6 +1,6 @@
 # Behavioral Analytics Dashboard (SQL + Python + Streamlit)
 
-A full-stack data engineering and analytics application that transforms e-commerce behavioral data into actionable business intelligence. This project demonstrates the ability to manage the entire data lifecycle: from ingestion and relational storage to advanced SQL querying and interactive visualization.
+A data engineering and analytics application that transforms e-commerce behavioral data into actionable business intelligence. This project demonstrates the ability to manage the entire data lifecycle: from ingestion and relational storage to advanced SQL querying and interactive visualization.
 
 ## Key Features
 * **Dual-Stream Data Pipeline:** Supports both real-world e-commerce datasets and custom-built synthetic data generators (Faker).
