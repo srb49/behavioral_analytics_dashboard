@@ -64,3 +64,16 @@ try:
 except Exception as e:
     st.error(f"Error: {e}")
     st.write("Current columns in DB:", check_df.columns.tolist())
+
+
+def get_sql_query(file_path):
+    with open(file_path, 'r') as f:
+        return f.read()
+
+# Usage in your dashboard:
+if st.checkbox("Show Campaign Effectiveness"):
+    # We pull query #3 from our file (you'd usually split these or use specific markers)
+    # For now, let's just run a specific part or the whole file
+    conn = sqlite3.connect('data/analytics.db')
+    df_kpi = pd.read_sql_query("SELECT Segment_Label, SUM(Campaign_Response) as Responses FROM user_analytics GROUP BY 1", conn)
+    st.bar_chart(df_kpi.set_index('Segment_Label'))
