@@ -77,3 +77,20 @@ if st.checkbox("Show Campaign Effectiveness"):
     conn = sqlite3.connect('data/analytics.db')
     df_kpi = pd.read_sql_query("SELECT Segment_Label, SUM(Campaign_Response) as Responses FROM user_analytics GROUP BY 1", conn)
     st.bar_chart(df_kpi.set_index('Segment_Label'))
+
+def run_kpi_query(query_index):
+    """Reads the .sql file and executes a specific query block."""
+    with open('sql/kpi_queries.sql', 'r') as f:
+        # Split by semicolon to get individual queries
+        queries = f.read().split(';')
+        
+    conn = sqlite3.connect('data/analytics.db')
+    df = pd.read_sql_query(queries[query_index], conn)
+    conn.close()
+    return df
+
+# In your Streamlit UI:
+if st.button("Run Campaign Response Analysis"):
+    # Runs the 3rd query in your .sql file
+    results = run_kpi_query(2) 
+    st.dataframe(results)

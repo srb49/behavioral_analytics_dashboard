@@ -1,28 +1,26 @@
 # Behavioral Analytics Dashboard (SQL + Python + Streamlit)
 
-A full-stack data engineering project demonstrating how to transform raw business metrics into an interactive decision-making tool.
+A full-stack data engineering and analytics application that transforms e-commerce behavioral data into actionable business intelligence. This project demonstrates the ability to manage the entire data lifecycle: from ingestion and relational storage to advanced SQL querying and interactive visualization.
 
-## Overview
-This project processes e-commerce user behavior data to provide actionable insights into customer segmentation. It demonstrates a clean separation of concerns between the data storage layer (SQL), processing logic (Python), and the presentation layer (Streamlit).
+## 🌟 Key Features
+* **Dual-Stream Data Pipeline:** Supports both real-world e-commerce datasets and custom-built synthetic data generators (Faker).
+* **Relational Storage Layer:** Data is architected in SQLite, utilizing optimized schemas for analytical performance.
+* **Advanced Analytics:** Implements Business Logic through SQL CTEs (Common Table Expressions) and complex joins.
+* **Interactive UI:** A multi-page Streamlit dashboard featuring real-time filtering, KPI metrics, and dynamic Plotly visualizations.
+* **Professional Engineering:** Separation of concerns between SQL logic, Python ETL scripts, and the frontend application.
 
-### Key Features
-* **Automated ETL Pipeline:** Python scripts to clean and ingest CSV data into a structured SQLite database.
-* **Relational Storage:** Uses SQL for efficient data querying and filtering.
-* **Behavioral Segmentation:** Interactive dashboard to analyze RFM (Recency, Frequency, Monetary) metrics across different user groups.
-* **Dynamic Visualizations:** Real-time charting using Plotly and Streamlit.
-
-## Tech Stack
-* **Language:** Python 3.x
-* **Database:** SQLite (SQLAlchemy/sqlite3)
+## 🛠️ Technical Stack
+* **Backend/Storage:** Python, SQL (SQLite)
 * **Frontend:** Streamlit
-* **Data Analysis:** Pandas, Plotly
-* **Simulation:** Faker (Planned/Upcoming)
+* **Data Science:** Pandas, NumPy, Plotly
+* **DevOps/Tooling:** Virtual Environments, Faker (Synthetic Data Generation)
 
-## Project Structure
+## 📂 Project Structure
 ```text
 behavioral-analytics-dashboard/
-├── data/               # SQLite database and raw CSVs
-├── scripts/            # ETL and data ingestion scripts
-├── sql/                # SQL schema definitions
-├── app/                # Streamlit dashboard application
-└── requirements.txt    # Project dependencies
+├── app/                # Streamlit Dashboard (UI Layer)
+├── data/               # SQLite Databases (.db) and Raw CSVs
+├── scripts/            # ETL & Data Simulation (Logic Layer)
+├── sql/                # DDL Schema and Analytical Queries (Data Layer)
+├── requirements.txt    # Dependency Management
+└── README.md           # Documentation

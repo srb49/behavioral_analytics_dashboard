@@ -1,0 +1,11 @@
+# Data Handling
+pandas
+sqlalchemy
+numpy
+
+# UI & Visualization
+streamlit
+plotly
+
+# Data Simulation
+faker
