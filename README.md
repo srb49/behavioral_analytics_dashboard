@@ -12,11 +12,11 @@ This project processes e-commerce user behavior data to provide actionable insig
 * **Dynamic Visualizations:** Real-time charting using Plotly and Streamlit.
 
 ## Tech Stack
-* **Language:** Python 3.x
+* **Language:** Python 3.9
 * **Database:** SQLite (SQLAlchemy/sqlite3)
 * **Frontend:** Streamlit
 * **Data Analysis:** Pandas, Plotly
-* **Simulation:** Faker (Planned/Upcoming)
+* **Simulation:** Faker 
 
 ## Project Structure
 ```text
@@ -26,3 +26,13 @@ behavioral-analytics-dashboard/
 ├── sql/                # SQL schema definitions
 ├── app/                # Streamlit dashboard application
 └── requirements.txt    # Project dependencies
+
+data/: analytics.db (Real) and simulated_analytics.db (Fake)
+
+sql/: schema.sql and kpi_queries.sql
+
+scripts/: ingest_data.py and simulate_data.py
+
+app/: main.py (The dashboard)
+
+Root: README.md and requirements.txt
